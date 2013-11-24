@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class = "row header">
-        <div class = "col-md-4 pull-left" id = "logo" style = "clear:both;">
+        <div class = "col-md-4 pull-left" id = "logo">
             Blanco
         </div>
         <div class = "col-md-8 pull-right">
@@ -18,6 +18,15 @@
                 <li><a href = "#">About Us</a></li>
             </ul>
         </div>
+    </div>
+    <div class = "content">
+        @yield('content')
+    </div>
+    <div class = "row footer">
+        <a href = "index">Blanco</a> |
+        <a href = "#">Development</a> |
+        <a href = "#">Contact Us</a>
+        <br>Copyright 2013 Powered by Globe Labs
     </div>
     <script type = "text/javscript" src= "js/bootstrap.min.js"> </script>
   </body>

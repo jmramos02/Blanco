@@ -1,3 +1,4 @@
+
 @font-face{
 	font-family:"Existence";
 	font-weight:normal;
@@ -9,11 +10,18 @@ body{
 #navigation{
 	position:relative;
 	top:5vh;
-	font-family:Verdana;
+	font-family:Tahoma;
 	font-size:3vh;
 	text-align: right;
 	padding:3vh;
 
+}
+a{
+	color:white;
+}
+.content a:hover{
+	color:white;
+	text-decoration: none;
 }
 #navigation li{
 	list-style-type: none;
@@ -38,4 +46,50 @@ body{
 }
 .header{
 	background-color:rgb(238,50,51);
+}
+.content{
+	font-family:Segoe UI;
+	padding:10vh;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+	color:rgb(238,50,51);
+	font-family:Segoe UI;
+}
+.content h1{
+	font-size:15vh;
+}
+.content h6{
+	font-size:4vh;
+}
+#get-started{
+	margin-top:5vh;
+	padding:2vh;
+	background-color:rgb(238,50,51);
+	border:1;
+	color:white;
+	width:28vh;
+}
+#get-started:hover{
+	background-color:rgba(238,50,51,0.8);
+	cursor:pointer;
+}
+#description{
+	font-size:3vh;
+	padding:8vh;
+	position:relative;
+	top:10vh;
+}
+#description .col-md-4{
+	text-align:center;
+}
+.footer{
+	text-align:center;
+	font-size:10px;
+}
+.footer a{
+	color:black;
+}
+.content .row{
+	margin-top:10vh;
 }
