@@ -1,6 +1,6 @@
 <?php
 
-class HomeController extends BaseController {
+class SignUpController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -15,13 +15,15 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function getIndex()
 	{
 		require ('PHP/src/GlobeApi.php');
-		globe = new GlobeApi([version]);
-		$auth = $globe->auth([YOUR APP ID],[YOUR APP SECRET]);
+		$globe = new GlobeApi('v1');
+		$auth = $globe->auth('4xEbGfk9a8RfA7czo6ia6EfaEEEkf8aa ','be9cf5849684d831bc858659a3a1ac41ff0fc4238e8ac08994d345fbc09ea5e2');
+		
 		$loginUrl = $auth->getLoginUrl();
-		header('Location: '.$loginUrl);
+		echo $loginUrl;
+		Redirect::to($loginUrl);
 	}
 
 }
