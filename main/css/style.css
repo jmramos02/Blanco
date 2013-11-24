@@ -85,6 +85,8 @@ h1, h2, h3, h4, h5, h6{
 	text-align:center;
 }
 .footer{
+	position:relative;
+	top:5vh;
 	text-align:center;
 	font-size:2vh;
 }
@@ -117,16 +119,33 @@ h1, h2, h3, h4, h5, h6{
 #register-form{
 	font-size:3.0vh;
 }
-.form-control[type="submit"]{
-	position:relative;
-	top:3vh;
-	left:28vh;
-	width:50%;
-	padding-top:0;
-}
 .register-link a{
 	color:rgb(240,50,51);
 }
 .register-link a:hover{
 	color:rgba(240,50,51,0.8);
+}
+button{
+	border:none;
+	width:20vh;
+	color:white;
+	height:auto;
+	font-size:2.8vh;
+	background-color:rgb(240,50,51);
+}
+button:hover{
+	background-color:rgba(240,50,51,0.8);
+}
+.error{
+	color:red;
+}
+.submit-button{
+	background-color:rgb(240,50,51);
+	width:20vh;
+	height:auto;
+	color:white;
+	border:none;
+}
+.submit-button:hover{
+	background-color:rgba(240,50,51,0.8);
 }

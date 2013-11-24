@@ -23,4 +23,8 @@ Route::get('/login', function()
 {
 	return View::make('login');
 });
-Route::controller('/redirect','SignUpController');
+Route::get('/register',function(){
+	return View::make('register');
+});
+Route::post('/register/adduser','SignUpController@registerUser');
+Route::post('/async','AjaxController@validateUsername');

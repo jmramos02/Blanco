@@ -1,6 +1,6 @@
-<?php
+ <?php
 
-class SignUpController extends BaseController {
+class LoginController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -16,27 +16,13 @@ class SignUpController extends BaseController {
 	*/
 
 	public function registerUser(){
-		$rules = array('first_name' => 'required',
-					   'last_name' => 'required',
-					   'email' => 'required|email',
-					   'username' => 'required|unique:users',
+		$rules = array('username' => 'required|unique:users',
 					   'password'=>'required');
 		$validator = Validator::make(Input::all(),$rules);
 		if($validator->fails()){
 			return Redirect::to('register')->withErrors($validator);
 		}else{
-			$user = new User();
-			$user->first_name = Input::get('first_name');
-			$user->password = Input::get('password');
-			$user->username = Input::get('username');
-			$user->last_name = Input::get('last_name');
-			$user->email = Input::get('email');
-			$user->login_status = 0;
-			$user->remaining_balance = 0;
-			$user->access_token = '';
-			$user->subscriber_number = '';
-			$user->save();
-			Session::put('message','Registration Successful');
+			Session::put('message','success!');
 			return Redirect::to('register');
 		}
 		
