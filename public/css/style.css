@@ -1,0 +1,41 @@
+@font-face{
+	font-family:"Existence";
+	font-weight:normal;
+	src:url(../fonts/Existence-Light.otf);
+}
+body{
+	/*font-family:Segoe UI;*/
+}
+#navigation{
+	position:relative;
+	top:5vh;
+	font-family:Verdana;
+	font-size:3vh;
+	text-align: right;
+	padding:3vh;
+
+}
+#navigation li{
+	list-style-type: none;
+	display:inline;
+	padding-right:1vh;
+	padding-left:1vh;
+}
+#navigation a{
+	list-style-type: none;
+	display:inline;
+	padding-right:4vh;
+	color:white;
+}
+#navigation a:hover{
+	color:white;
+}
+#logo{
+	padding:3vh;
+	font-size:10vh;
+	color:white;
+	font-family:"Existence";
+}
+.header{
+	background-color:rgb(238,50,51);
+}
