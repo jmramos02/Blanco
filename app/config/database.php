@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
+			'host'      => 'creativejosecom.ipagemysql.com',
 			'database'  => 'blanco',
-			'username'  => 'root',
-			'password'  => '',
+			'username'  => 'jm_pogi',
+			'password'  => 'pogi',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

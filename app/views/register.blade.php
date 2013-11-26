@@ -3,7 +3,7 @@
 @section('content')
   <div class = "error-box">
     <?php
-         foreach ($errors->all() as $message){
+      foreach ($errors->all() as $message){
           echo "<p class = 'error'>$message</a>";
       }
       $message = Session::get('message');
@@ -37,7 +37,7 @@
         <div class = "col-md-3">
           {{Form::text('username','',array('class' => 'form-control username', 'placeholder' => 'Must be unique'))}}
         </div>
-        <div class = "col-md-12" id = "ajax-container">
+        <div class = "col-md-1" id = "ajax-container">
           <button id = "check-username">Check</button>
         </div>
       </div>
@@ -56,6 +56,12 @@
         </div>
       </div>
       <div class = "row">
+        <div class = "col-md-2">
+          Contact Number;
+        </div>
+        <div class = "col-md-3">
+          {{Form::text('contact_number','',array('class' => 'form-control'))}}
+        </div>
         <div class = "col-md-7">
           {{Form::submit('Register',array('class' => 'form-control submit-button'))}}
         </div>

@@ -14,7 +14,7 @@
         <div class = "col-md-8 pull-right">
             <ul id = "navigation">
                 <li> <a href = "index">Home </a></li>
-                <li> <a href = "login">Register/Login</a></li>
+                <li> <a href = "login">Login</a></li>
                 <li><a href = "#">What's This About</a></li>
                 <li><a href = "#">About Us</a></li>
             </ul>

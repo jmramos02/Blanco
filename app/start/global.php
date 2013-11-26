@@ -79,5 +79,8 @@ App::down(function()
 | definitions instead of putting them all in the main routes file.
 |
 */
-
+DEFINE('SHORT_CODE','21586106');
+DEFINE('TRANSCODE','6106');
+DEFINE('APP_ID','4xEbGfk9a8RfA7czo6ia6EfaEEEkf8aa');
+DEFINE('APP_SECRET','be9cf5849684d831bc858659a3a1ac41ff0fc4238e8ac08994d345fbc09ea5e2');
 require app_path().'/filters.php';

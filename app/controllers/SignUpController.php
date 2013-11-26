@@ -20,7 +20,8 @@ class SignUpController extends BaseController {
 					   'last_name' => 'required',
 					   'email' => 'required|email',
 					   'username' => 'required|unique:users',
-					   'password'=>'required');
+					   'password'=>'required',	
+					   'contact_number' => 'required');
 		$validator = Validator::make(Input::all(),$rules);
 		if($validator->fails()){
 			return Redirect::to('register')->withErrors($validator);
@@ -34,7 +35,7 @@ class SignUpController extends BaseController {
 			$user->login_status = 0;
 			$user->remaining_balance = 0;
 			$user->access_token = '';
-			$user->subscriber_number = '';
+			$user->subscriber_number = Input::get('contact_number');
 			$user->save();
 			Session::put('message','Registration Successful');
 			return Redirect::to('register');

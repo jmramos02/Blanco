@@ -22,11 +22,27 @@
         </div>
         <div class = "row">
           <div class = "col-md-8">
-            {{Form::submit('Login',array('class' => 'form-control'))}}
+            {{Form::submit('Login',array('class' => 'form-control','id' => 'login-button'))}}
           </div>
         </div>
       </div>
     {{ Form::close() }}
+    <div class = "row">
+       <?php
+         foreach ($errors->all() as $message){
+          echo "<p class = 'error'>$message</a>";
+      }
+      $message = Session::get('message');
+      if(isset($message)){
+          echo '<p>' . $message . '</p>';
+          Session::forget('message');
+      }
+    ?>
+    </div>
+    </div>
+    <div class = "col-md-6">
+      <h2>Don't Have an account Yet?</h2> 
+      Register <a href = "register">Here</a>
     </div>
   </div>
 @stop

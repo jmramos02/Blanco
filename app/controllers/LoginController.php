@@ -2,28 +2,15 @@
 
 class LoginController extends BaseController {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
-
-	public function registerUser(){
-		$rules = array('username' => 'required|unique:users',
+	public function validateLogin(){
+		$rules = array('username' => 'required|exists:users,username,password,'.Input::get('password'),
 					   'password'=>'required');
 		$validator = Validator::make(Input::all(),$rules);
 		if($validator->fails()){
-			return Redirect::to('register')->withErrors($validator);
+			return Redirect::to('login')->withErrors($validator);
 		}else{
-			Session::put('message','success!');
-			return Redirect::to('register');
+			Session::put('username',Input::get('username'));
+			return Redirect::to('dashboard');
 		}
 		
 	}
